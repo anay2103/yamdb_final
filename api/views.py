@@ -11,18 +11,18 @@ from rest_framework.filters import SearchFilter
 from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
                                    ListModelMixin)
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import (AllowAny, IsAuthenticated)
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
+
 from .filter import TitleFilter
 from .models import Category, Genre, MyUser, Review, Title
 from .permissions import IsAdmin, IsAdminOrModerator, IsSafeMethodOrIsAdmin
 from .serializers import (CategorySerializer, CommentSerializer,
-                          GenreSerializer, TokenSerializer,
-                          ReviewSerializer, SendEmailSerializer,
-                          TitleCreateSerializer, TitleListSerializer,
-                          UserSerializer)
+                          GenreSerializer, ReviewSerializer,
+                          SendEmailSerializer, TitleCreateSerializer,
+                          TitleListSerializer, TokenSerializer, UserSerializer)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):

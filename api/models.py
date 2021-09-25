@@ -4,7 +4,6 @@ from django.db import models
 
 from .validators import validator_year
 
-
 Roles = (
     ('USER', 'user'),
     ('MODERATOR', 'moderator'),
