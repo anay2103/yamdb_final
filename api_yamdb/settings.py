@@ -14,8 +14,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','62.84.116.179').split(' ')
-SECRET_KEY = os.environ.get('SECRET_KEY', 'czunbqnl1v-cb5af-u6$-fwoxn^zi&-!3-xrq6ns3lbmn_b+-_')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '62.84.116.179').split(' ')
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    'czunbqnl1v-cb5af-u6$-fwoxn^zi&-!3-xrq6ns3lbmn_b+-_')
 DOMAIN_NAME = 'from@example.com'
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
@@ -119,7 +121,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
- 
+
 # REST
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
